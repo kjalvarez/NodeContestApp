@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	h1= title
+	p Welcome to the #{title}
+	p Please enter a submission below.
+
+	form(action="form" method="get")
+		h3 Creator:
+		input.form(type="text", name="creator")
+		h3 Video link:
+		input.form(type="url", name="url")
+		h3 Video title:
+		input.form(type="text", name="vidTitle")
+		h3 Video description:
+		input.form(type="text", name="description") 

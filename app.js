@@ -6,7 +6,8 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var submissionPageController = require('./controllers/submissionpagecontroller.js')
+var submissionPageController = require('./controllers/submissionPageController.js')
+var entryPageController = require('./controllers/entryPageController.js')
 var app = express();
 
 // all environments
@@ -27,6 +28,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', submissionPageController.index);
+app.get('/submissions', entryPageController.index)
 
 
 http.createServer(app).listen(app.get('port'), function(){

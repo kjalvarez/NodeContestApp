@@ -4,3 +4,6 @@ var submission = function(creator, video URL, title, description) {
 	this.title=title;
 	this.description=description;
 }
+
+var entries = [];
+

@@ -29,6 +29,9 @@ if ('development' == app.get('env')) {
 
 app.get('/', submissionPageController.index);
 app.get('/submissions', entryPageController.index)
+app.post('/form', entryPageController.form)
+
+
 
 
 http.createServer(app).listen(app.get('port'), function(){

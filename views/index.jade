@@ -5,7 +5,7 @@ block content
 	p Welcome to the #{title}
 	p Please enter a submission below.
 
-	form(action="form" method="get")
+	form(action="form" method="post")
 		h3 Creator:
 		input.form(type="text", name="creator")
 		h3 Video link:
@@ -14,3 +14,4 @@ block content
 		input.form(type="text", name="vidTitle")
 		h3 Video description:
 		input.form(type="text", name="description") 
+		button Submit!

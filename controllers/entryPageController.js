@@ -1,4 +1,4 @@
-// var submissionModel=require('../models/submissiondata')
+var submissionModel=require('../models/submissiondata.js')
 
 module.exports = {
 	index: function (req, res) {
@@ -7,13 +7,11 @@ module.exports = {
 		})
 	},
 
+
 	form: function(req, res) {
+		submissionModel.create(req.body.creator, req.body.url, req.body.vidTitle, req.body.description)
 		res.render('entryPage', {
-			title: "Video Contest!",
-			creator: req.body.creator,
-			link: req.body.url,
-			title: req.body.vidTitle,
-			description: req.body.description
+			
 		});
 	}
 }
